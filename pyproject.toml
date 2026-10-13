@@ -4,7 +4,7 @@ version = "0.1.0"
 description = "Self-hosted gateway for AI coding agents"
 readme = "README.md"
 requires-python = ">=3.11"
-license = { text = "MIT" }
+license = { text = "GPL-3.0-only" }
 authors = [{ name = "Pingent contributors" }]
 dependencies = [
     "aiogram>=3.0",

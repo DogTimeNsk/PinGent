@@ -1,5 +1,5 @@
 # Pingent
-
+1;5B
 Pingent is a self-hosted gateway for two-way interaction with AI coding agents.
 Each installation runs independently on the operator's Linux computer and owns
 its Telegram bot, local SQLite database, workspaces, and Codex sessions.
@@ -134,4 +134,5 @@ shows how an adapter can be written without making PHP a Pingent dependency.
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+Pingent is licensed under the GNU General Public License v3.0.
+See [LICENSE](LICENSE) for details.
