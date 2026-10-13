@@ -1,0 +1,13 @@
+# Paths copied into a public repository export. Entries are repository-relative.
+.env.example
+.github
+.gitignore
+.python-version
+LICENSE
+README.md
+docs
+pyproject.toml
+src
+tests
+tools
+uv.lock

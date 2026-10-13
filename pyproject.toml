@@ -1,0 +1,52 @@
+[project]
+name = "pingent"
+version = "0.1.0"
+description = "Self-hosted gateway for AI coding agents"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Pingent contributors" }]
+dependencies = [
+    "aiogram>=3.0",
+    "aiosqlite>=0.20",
+    "argon2-cffi>=25.0",
+    "fastapi>=0.115",
+    "markdown-it-py>=3.0",
+    "markdown-it-py>=3.0",
+    "pydantic-settings>=2.0",
+    "uvicorn>=0.30",
+]
+
+[project.scripts]
+pingent = "pingent.cli:main"
+
+[dependency-groups]
+dev = [
+    "httpx2>=0.1",
+    "pytest>=8.0",
+    "pytest-asyncio>=0.23",
+    "ruff>=0.8",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+markers = [
+    "integration: requires a locally installed Codex CLI",
+]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "lf"

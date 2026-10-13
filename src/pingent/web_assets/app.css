@@ -1,0 +1,33 @@
+:root { color-scheme: dark; font-family: system-ui, sans-serif; background: #12151b; color: #e9edf5; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+.shell { max-width: 1080px; margin: 0 auto; padding: 2rem 1rem 4rem; }
+header { display: flex; align-items: start; justify-content: space-between; gap: 1rem; }
+h1, h2, p { margin-top: 0; }
+h1 { margin-bottom: .25rem; }
+h3 { margin: 1rem 0 .65rem; font-size: 1rem; }
+.grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 1rem; }
+.panel { background: #1c212b; border: 1px solid #303949; border-radius: .7rem; padding: 1.25rem; margin-top: 1rem; }
+.narrow { max-width: 420px; margin: 12vh auto; }
+form, label { display: grid; gap: .6rem; }
+label + label { margin-top: .8rem; }
+input, textarea, select, button { font: inherit; border-radius: .4rem; }
+input, textarea, select { width: 100%; padding: .65rem; color: inherit; background: #11151c; border: 1px solid #47556d; }
+textarea { resize: vertical; }
+button { cursor: pointer; padding: .65rem .9rem; color: #08111f; font-weight: 650; background: #82b8ff; border: 1px solid #a8ccff; }
+button.secondary { background: transparent; color: #b9c8dd; border-color: #63718a; }
+.task { border-top: 1px solid #303949; padding: .85rem 0; }
+.task:first-child { border-top: 0; padding-top: 0; }
+.task-meta { display: flex; justify-content: space-between; gap: 1rem; color: #aab7c9; font-size: .9rem; }
+.stopping-group { margin-top: 1rem; padding-top: .1rem; border-top: 1px solid #47556d; }
+.task-stopping .task-meta { color: #ffcf85; }
+.task p, pre { white-space: pre-wrap; overflow-wrap: anywhere; margin: .45rem 0; }
+.markdown { overflow-wrap: anywhere; }
+.markdown > :last-child { margin-bottom: 0; }
+.markdown pre { padding: .8rem; overflow-x: auto; border-radius: .4rem; background: #11151c; }
+.markdown code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+.markdown :not(pre) > code { padding: .1rem .3rem; border-radius: .25rem; background: #11151c; }
+.markdown a { color: #9bcbff; }
+.empty { color: #aab7c9; }
+#notice { min-height: 1.5rem; color: #ffcf85; }
+@media (max-width: 700px) { .grid { grid-template-columns: 1fr; } .shell { padding-top: 1rem; } }
